@@ -1,0 +1,15 @@
+.product{
+    text-align: center;
+}
+.button{
+    background-color: goldenrod;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: aquamarine;
+}
