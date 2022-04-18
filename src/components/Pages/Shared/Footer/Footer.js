@@ -2,9 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <h1>This is Footer</h1>
-        </div>
+        <footer className='text-center mt-5'>
+            <p><small>Copyright © {2022}</small></p>
+
+        </footer>
     );
 };
 

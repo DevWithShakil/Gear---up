@@ -1,5 +1,6 @@
 import { Carousel } from 'react-bootstrap';
 import React, { useState } from 'react';
+import './Banner.css'
 
 import banner from '../../../../assest/Banner/banner.png';
 import banner2 from '../../../../assest/Banner/banner2.jpg';
@@ -13,7 +14,7 @@ const Banner = () => {
   };
 
     return (
-        <div>
+        <div className='carousel'>
            <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
