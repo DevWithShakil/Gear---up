@@ -7,6 +7,7 @@ import Services from "./components/Pages/Home/Services";
 import Login from "./components/Pages/Login/Login";
 import RequireAuth from "./components/Pages/Login/RequireAuth/RequireAuth";
 import Register from "./components/Pages/Login/Register/Register";
+import ServiceDetail from "./components/Pages/ServiceDetail/ServiceDetail";
 import Checkout from "./components/Pages/Checkout/Checkout";
 import Contact from "./components/Pages/Shared/Contact/Contact";
 import Footer from "./components/Pages/Shared/Footer/Footer";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/service/:serviceId" element={<ServiceDetail />} />
         <Route
           path="/checkout"
           element={
