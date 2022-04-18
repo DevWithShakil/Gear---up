@@ -9,7 +9,6 @@ import RequireAuth from "./components/Pages/Login/RequireAuth/RequireAuth";
 import Register from "./components/Pages/Login/Register/Register";
 import ServiceDetail from "./components/Pages/ServiceDetail/ServiceDetail";
 import Checkout from "./components/Pages/Checkout/Checkout";
-import Contact from "./components/Pages/Shared/Contact/Contact";
 import Footer from "./components/Pages/Shared/Footer/Footer";
 import Header from "./components/Pages/Shared/Header";
 import NotFound from "./components/Pages/Shared/NotFound/NotFound";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/service/:serviceId" element={<ServiceDetail />} />

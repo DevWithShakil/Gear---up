@@ -1,23 +1,23 @@
-.site-name{
-    font-weight: 800;
-    color: yellow;
+.site-name {
+  font-weight: 800;
+  color: yellow;
 }
 
-.navbar-nav a{
-    color: rgb(246, 251, 255);
-    text-decoration: none;
-    padding: 8px;
+.navbar-nav a {
+  color: rgb(246, 251, 255);
+  text-decoration: none;
+  padding: 8px;
 }
 
-.navbar{
-    font-size: 20px;
-    background-color: gray;
+.navbar {
+  font-size: 20px;
+  background-color: #035397;
 }
-.navbar a:hover{
-    color: red;
-    padding: 5px;
-    border-radius: 5px;
-    transform: scale(1.2);
-    font-weight: 600;
-    transition: .5s;
+.navbar a:hover {
+  color: red;
+  padding: 5px;
+  border-radius: 5px;
+  transform: scale(1.2);
+  font-weight: 600;
+  transition: 0.5s;
 }
