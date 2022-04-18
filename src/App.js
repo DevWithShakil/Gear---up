@@ -5,7 +5,9 @@ import Blogs from "./components/Pages/Blogs/Blogs";
 import Home from "./components/Pages/Home/Home/Home";
 import Services from "./components/Pages/Home/Services";
 import Login from "./components/Pages/Login/Login";
+import RequireAuth from "./components/Pages/Login/RequireAuth/RequireAuth";
 import Register from "./components/Pages/Login/Register/Register";
+import Checkout from "./components/Pages/Checkout/Checkout";
 import Contact from "./components/Pages/Shared/Contact/Contact";
 import Footer from "./components/Pages/Shared/Footer/Footer";
 import Header from "./components/Pages/Shared/Header";
@@ -23,6 +25,14 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
