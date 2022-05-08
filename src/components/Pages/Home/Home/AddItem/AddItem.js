@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import axiosPrivate from '../../../../../Api/axiosPrivate';
 
 const AddItem = () => {
     const handleAddItem = (event) => {
@@ -13,11 +14,11 @@ const AddItem = () => {
             quantity: event.target.quantity.value,
             email: event.target.email.value,
         };
-        // axiosPrivate.post("https://secure-reaches-83838.herokuapp.com/dress", dressCollection)
-        //     .then(response => {
-        //         toast.success("product upload successfully")
-        //         event.target.reset()
-        //     })
+        axiosPrivate.post("http://localhost:5000/service", bikecollection)
+            .then(response => {
+                console.log(response);
+                event.target.reset()
+            })
     };
 
     return (
