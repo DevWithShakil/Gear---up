@@ -13,6 +13,7 @@ import Footer from "./components/Pages/Shared/Footer/Footer";
 import Header from "./components/Pages/Shared/Header";
 import NotFound from "./components/Pages/Shared/NotFound/NotFound";
 import ManageInventory from "./components/Pages/Home/Home/ManageInventory";
+import AddItem from "./components/Pages/Home/Home/AddItem/AddItem";
 
 function App() {
   return (
@@ -31,6 +32,14 @@ function App() {
           element={
             <RequireAuth>
               <ManageInventory ></ManageInventory>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path='/additem'
+          element={
+            <RequireAuth>
+              <AddItem></AddItem>
             </RequireAuth>
           }
         />

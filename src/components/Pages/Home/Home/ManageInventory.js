@@ -1,12 +1,30 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ManageInventory = () => {
     const [services, setService] = useState([])
+    const navigate = useNavigate()
     useEffect(() => {
         fetch("http://localhost:5000/service")
             .then(res => res.json())
             .then(data => setService(data))
-    }, [])
+    }, []);
+
+    const handelUserDelete = id => {
+        const procced = window.confirm("Are you sure?")
+        if (procced) {
+            axios.delete(`http://localhost:5000/service/${id}`)
+                .then(response => {
+                    console.log(response);
+                    if (response.data.deletedCount > 0) {
+                        const remaining = services.filter(service => service._id !== id)
+                        setService(remaining)
+                    }
+                })
+        }
+
+    }
     return (
         <div>
             <div>
@@ -25,13 +43,14 @@ const ManageInventory = () => {
                         <tbody>
                             {
                                 services.map(service => {
+
                                     return <tr>
                                         <th scope="row">{service?.supplier}</th>
                                         <td>{service.title}</td>
                                         <td>${service.price}</td>
                                         <td>{service.quantity}</td>
                                         <td>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button onClick={() => handelUserDelete(service._id)} className='btn btn-danger'>Delete</button>
                                         </td>
 
                                     </tr>
@@ -43,7 +62,7 @@ const ManageInventory = () => {
 
                 <div>
                     <div className="text-center mt-5">
-                        <button className="inventory-btn">Add-item</button>
+                        <button onClick={() => navigate('/additem')} className="inventory-btn">Add-item</button>
                     </div>
                 </div>
             </div>
