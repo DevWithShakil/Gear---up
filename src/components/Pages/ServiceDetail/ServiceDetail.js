@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
@@ -5,7 +6,8 @@ import { Link, useParams } from "react-router-dom";
 const ServiceDetail = () => {
   const { id } = useParams();
   const [service, setServices] = useState({});
-  console.log(service);
+  const [reload, setReload] = useState(false)
+
 
   useEffect(() => {
     const url = `http://localhost:5000/service/${id}`;
@@ -15,11 +17,28 @@ const ServiceDetail = () => {
       .then(data => setServices(data));
 
 
-  }, [id])
+  }, [id, reload])
 
   const handleDelivered = () => {
+    const quantity = service.quantity - 1
+    axios.put(`http://localhost:5000/service/${id}`, { quantity })
+      .then(response => {
+        setReload(!reload)
+      })
 
   }
+  const handleAddQuantity = (event) => {
+    event.preventDefault()
+    const newQuantity = event.target.quantity.value;
+    const quantity = parseInt(service.quantity) + parseInt(newQuantity)
+    axios.put(`http://localhost:5000/service/${id}`, { quantity })
+      .then(response => {
+        setReload(!reload)
+        event.target.reset()
+      })
+
+  }
+
   return (
     <div>
       <div className="container mt-5">
@@ -42,7 +61,7 @@ const ServiceDetail = () => {
             <p>
               Quantity: <small>{service?.quantity}</small>{" "}
             </p>
-            <Form >
+            <Form onSubmit={handleAddQuantity}>
               <Form.Group className="mb-3 w-50" controlId="formBasicEmail">
                 <Form.Control
                   type="number"
@@ -53,7 +72,7 @@ const ServiceDetail = () => {
               </Form.Group>
               <button className="btn btn-secondary px-5 py-2">add</button>
             </Form>
-            <button className="btn btn-primary px-4 mt-3 py-2">
+            <button onClick={handleDelivered} className="btn btn-primary px-4 mt-3 py-2">
               Delivered
             </button>
           </div>

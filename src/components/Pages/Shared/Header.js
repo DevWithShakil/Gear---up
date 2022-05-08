@@ -21,9 +21,13 @@ const Header = () => {
         </div>
         <Nav className="ms-auto gap-5 navbar">
           <Link to="/">Home</Link>
-          {/* <Link to="/services">Services</Link> */}
+          <Link to="/services">Services</Link>
           <Link to="/blogs">Blog</Link>
-          {/* <Link to="/about">About</Link> */}
+          {
+            user && <>
+              <Link to='/manageinventory'>ManageInventory</Link>
+            </>
+          }
           {user ? (
             <button
               className="btn btn-link text-white text-decoration-none"

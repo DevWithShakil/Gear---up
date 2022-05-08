@@ -12,6 +12,7 @@ import Checkout from "./components/Pages/Checkout/Checkout";
 import Footer from "./components/Pages/Shared/Footer/Footer";
 import Header from "./components/Pages/Shared/Header";
 import NotFound from "./components/Pages/Shared/NotFound/NotFound";
+import ManageInventory from "./components/Pages/Home/Home/ManageInventory";
 
 function App() {
   return (
@@ -26,14 +27,13 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/service/:id" element={<ServiceDetail />} />
         <Route
-          path="/checkout"
+          path='/manageinventory'
           element={
             <RequireAuth>
-              <Checkout />
+              <ManageInventory ></ManageInventory>
             </RequireAuth>
           }
         />
-
         <Route path="*" element={<Home></Home>} />
       </Routes>
       <Footer></Footer>
