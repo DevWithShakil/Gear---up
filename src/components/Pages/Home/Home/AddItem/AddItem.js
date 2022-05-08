@@ -5,7 +5,7 @@ import axiosPrivate from '../../../../../Api/axiosPrivate';
 const AddItem = () => {
     const handleAddItem = (event) => {
         event.preventDefault();
-        const bikecollection = {
+        const bikeCollection = {
             title: event.target.product.value,
             price: event.target.price.value,
             img: event.target.imgUrl.value,
@@ -14,7 +14,7 @@ const AddItem = () => {
             quantity: event.target.quantity.value,
             email: event.target.email.value,
         };
-        axiosPrivate.post("http://localhost:5000/service", bikecollection)
+        axiosPrivate.post("http://localhost:5000/service", bikeCollection)
             .then(response => {
                 console.log(response);
                 event.target.reset()

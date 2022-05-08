@@ -27,6 +27,7 @@ const Header = () => {
             user && <>
               <Link to='/manageinventory'>ManageInventory</Link>
               <Link to='/additem'>Additem</Link>
+              <Link to='/mypost'>Mypost</Link>
             </>
           }
           {user ? (

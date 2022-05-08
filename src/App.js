@@ -14,6 +14,7 @@ import Header from "./components/Pages/Shared/Header";
 import NotFound from "./components/Pages/Shared/NotFound/NotFound";
 import ManageInventory from "./components/Pages/Home/Home/ManageInventory";
 import AddItem from "./components/Pages/Home/Home/AddItem/AddItem";
+import Mypost from "./components/Pages/Home/Home/Mypost/Mypost";
 
 function App() {
   return (
@@ -40,6 +41,14 @@ function App() {
           element={
             <RequireAuth>
               <AddItem></AddItem>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path='/mypost'
+          element={
+            <RequireAuth>
+              <Mypost></Mypost>
             </RequireAuth>
           }
         />

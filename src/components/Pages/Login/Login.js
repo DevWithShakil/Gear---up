@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
@@ -11,21 +12,38 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { async } from "@firebase/util";
 import { sendPasswordResetEmail } from "firebase/auth";
+import axios from "axios";
 
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
+  const [user, loading1, error1] = useAuthState(auth);
+
 
   let from = location.state?.from?.pathname || "/";
 
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user1, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+
+
+
+  const email = user?.email
   if (user) {
+    axios.post('http://localhost:5000/login', { email })
+      .then(response => {
+        localStorage.setItem("userToken", response.data)
+        console.log(response);
+      })
     navigate(from, { replace: true });
   }
+
+
+
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
