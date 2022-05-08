@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import logo from "../../../assest/logo/logo1.png";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -16,13 +17,13 @@ const Header = () => {
     <Navbar variant="dark">
       <Container>
         <div>
-          <h3 className="site-name">Photo Phactory</h3>
+          <img src={logo} alt="" width={'100px'} height={'80px'} />
         </div>
-        <Nav className="me-auto ms-auto gap-5 navbar">
+        <Nav className="ms-auto gap-5 navbar">
           <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/blogs">Blogs</Link>
-          <Link to="/about">About</Link>
+          {/* <Link to="/services">Services</Link> */}
+          <Link to="/blogs">Blog</Link>
+          {/* <Link to="/about">About</Link> */}
           {user ? (
             <button
               className="btn btn-link text-white text-decoration-none"

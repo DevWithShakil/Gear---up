@@ -1,42 +1,61 @@
 [
   {
     "id": 1,
-    "title": "Uptown Photography",
-    "price": "$50",
-    "img": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Sport bike",
+    "price": "$2000",
+    "des": "Sport bikes are road bikes which emphasize top speed, acceleration, braking, handling and grip.",
+    "img": "https://i.ibb.co/m41LQ2h/bike6.png",
+    "quantity": "30",
+    "supplier": "Abdur Rahim"
   },
   {
     "id": 2,
-    "title": "Digital Darkroom ebook",
-    "price": "$70",
-    "img": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Muscle bike",
+    "price": "$1400",
+    "des": "s a nickname for a motorcycle type, derived from a sport bike design, that puts a disproportionately high priority on engine power.",
+    "img": "https://i.ibb.co/g42nJ7T/bike5.png",
+    "quantity": "14",
+    "supplier": "Abul Kalam"
   },
 
   {
     "id": 3,
-    "title": "Action Photography ebook",
-    "price": "$20",
-    "img": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Sport touring",
+    "price": "$950",
+    "des": "Although any motorcycle can be equipped and used for touring, touring motorcycles are specifically designed to excel at covering long distances.",
+    "img": "https://i.ibb.co/YQwHKbd/bike4.png",
+    "quantity": "30",
+    "supplier": "Abdul Karim"
   },
 
   {
     "id": 4,
-    "title": "Thrilling Frames",
-    "price": "$60",
-    "img": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Dual-sport",
+    "price": "$700",
+    "des": "Dual-sports, sometimes called dual-purpose or on/off-road motorcycles or adventure motorcycles, are street legal machines that are also designed to enter off-road situations.",
+    "img": "https://i.ibb.co/GTjyYft/bike3.png",
+    "quantity": "11",
+    "supplier": "jinnat Ali"
+    
   },
 
   {
     "id": 5,
-    "title": "Catch the Smiles",
-    "price": "$10",
-    "img": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Off-road",
+    "price": "$800",
+    "des": "There are various types of off-road motorcycles, also known as dirt bikes, specially designed for off-road use. The term off-road refers to driving surfaces that are not conventionally paved.",
+    "img": "https://i.ibb.co/wN4QcVW/bike1.png",
+    "quantity": "23",
+    "supplier": "Mrs. Dulal"
   },
 
   {
     "id": 6,
-    "title": "Uptown Photography",
-    "price": "$9",
-    "img": "https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    "title": "Scooters",
+    "price": "$900",
+    "des": "Motor scooters are in many cases classified as a separate vehicle to motorbikes, given their large amount of differences, and different evolution.",
+    "img": "https://i.ibb.co/Kzbqct5/bike2.png",
+    "quantity": "21",
+    "supplier": "Abu Sufian"
   }
 ]

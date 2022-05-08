@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import './Banner.css'
 
 import banner from '../../../../assest/Banner/banner.png';
-import banner2 from '../../../../assest/Banner/banner2.jpg';
-import banner3 from '../../../../assest/Banner/banner3.jpg';
+import banner2 from '../../../../assest/Banner/banner1.jpg';
+import banner3 from '../../../../assest/Banner/banner2.jpg';
 
 const Banner = () => {
     const [index, setIndex] = useState  (0);

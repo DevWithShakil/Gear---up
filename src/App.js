@@ -21,10 +21,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/service" element={<Services />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/service/:serviceId" element={<ServiceDetail />} />
+        <Route path="/service/:id" element={<ServiceDetail />} />
         <Route
           path="/checkout"
           element={
@@ -34,7 +34,7 @@ function App() {
           }
         />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Home></Home>} />
       </Routes>
       <Footer></Footer>
     </div>
