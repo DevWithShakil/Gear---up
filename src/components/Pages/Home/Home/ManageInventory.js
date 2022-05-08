@@ -6,7 +6,7 @@ const ManageInventory = () => {
     const [services, setService] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        fetch("http://localhost:5000/service")
+        fetch("https://morning-coast-63993.herokuapp.com/service")
             .then(res => res.json())
             .then(data => setService(data))
     }, []);
@@ -14,7 +14,7 @@ const ManageInventory = () => {
     const handelUserDelete = id => {
         const procced = window.confirm("Are you sure?")
         if (procced) {
-            axios.delete(`http://localhost:5000/service/${id}`)
+            axios.delete(`https://morning-coast-63993.herokuapp.com/service/${id}`)
                 .then(response => {
                     console.log(response);
                     if (response.data.deletedCount > 0) {

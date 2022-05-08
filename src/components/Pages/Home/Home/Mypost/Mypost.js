@@ -12,7 +12,7 @@ const Mypost = () => {
     const navigate = useNavigate()
     useEffect(() => {
         const email = user.email
-        const url = `http://localhost:5000/userpost?email=${email}`
+        const url = `https://morning-coast-63993.herokuapp.com/userpost?email=${email}`
         const getItem = async () => {
             try {
                 const { data } = await axiosPrivate.get(url)

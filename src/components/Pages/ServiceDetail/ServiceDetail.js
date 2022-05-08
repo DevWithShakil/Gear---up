@@ -10,7 +10,7 @@ const ServiceDetail = () => {
 
 
   useEffect(() => {
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://morning-coast-63993.herokuapp.com/service/${id}`;
 
     fetch(url)
       .then(res => res.json())
@@ -21,7 +21,7 @@ const ServiceDetail = () => {
 
   const handleDelivered = () => {
     const quantity = service.quantity - 1
-    axios.put(`http://localhost:5000/service/${id}`, { quantity })
+    axios.put(`https://morning-coast-63993.herokuapp.com/service/${id}`, { quantity })
       .then(response => {
         setReload(!reload)
       })
@@ -31,7 +31,7 @@ const ServiceDetail = () => {
     event.preventDefault()
     const newQuantity = event.target.quantity.value;
     const quantity = parseInt(service.quantity) + parseInt(newQuantity)
-    axios.put(`http://localhost:5000/service/${id}`, { quantity })
+    axios.put(`https://morning-coast-63993.herokuapp.com/service/${id}`, { quantity })
       .then(response => {
         setReload(!reload)
         event.target.reset()

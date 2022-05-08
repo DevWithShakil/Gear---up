@@ -33,7 +33,7 @@ const Login = () => {
 
   const email = user?.email
   if (user) {
-    axios.post('http://localhost:5000/login', { email })
+    axios.post('https://morning-coast-63993.herokuapp.com/login', { email })
       .then(response => {
         localStorage.setItem("userToken", response.data)
         console.log(response);
@@ -101,7 +101,7 @@ const Login = () => {
         </Button>
       </Form>
       <p>
-        New to Photo Factory?{" "}
+        New to GearUp?{" "}
         <Link
           to="/register"
           className="text-danger pe-auto text-decoration-none"

@@ -14,7 +14,7 @@ const AddItem = () => {
             quantity: event.target.quantity.value,
             email: event.target.email.value,
         };
-        axiosPrivate.post("http://localhost:5000/service", bikeCollection)
+        axiosPrivate.post("https://morning-coast-63993.herokuapp.com/service", bikeCollection)
             .then(response => {
                 console.log(response);
                 event.target.reset()
